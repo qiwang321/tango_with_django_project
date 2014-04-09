@@ -1,0 +1,5 @@
+{% extends 'rango/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body_block %}

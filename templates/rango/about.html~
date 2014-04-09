@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+  <head>
+    <title>About page</title>
+  </head>
+  <body>
+    <p>This is the about page: <i>{{ itmessage }}</i> </p>
+    <a href="/rango/">Return Home</a> <br>
+    <img src="{% static "digits.jpg" %}" alt="This is an image of digits"></img>
+  </body>
+</html>

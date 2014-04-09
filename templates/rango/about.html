@@ -1,0 +1,15 @@
+{% extends 'rango/base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block body_block %}
+  <div class="hero-unit">
+  <h1>About Rango</h1>
+  This is <strong>Rango's about page</strong>.<br />
+  You have visited us <span style="color:red">{{ visits }}</span> times.
+  Here's a picture of Digits!<br /> 
+  {% load static %}
+  <img src="{% static "digits.jpg" %}" alt="Picture of Digits"></img>
+  </div>
+
+{% endblock %}

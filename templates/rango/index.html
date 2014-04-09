@@ -1,0 +1,38 @@
+{% extends 'rango/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+    <!-- Greetings and register/login -->
+  {% if user.is_authenticated %}
+    <h1>Rango says... hello {{ user.username }}!</h1>
+  {% else %}
+    <h1>Rango says... hello world!</h1>
+  {% endif %}
+</div>
+ 
+<div class="row-fluid">
+  <div class="span6">
+  <!-- List of categories -->
+    <h2>Top Five categories</h2>
+    {% if cat_list %}
+    <ul>
+      {% for category in cat_list %}
+        <li> <a href="/rango/category/{{ category.url }}">{{ category.name }}</a></li>
+      {% endfor %}
+    {% else %}
+      <strong>No categories at present.</strong>
+    {% endif %}
+  </div>
+  <!--/span-->
+  
+  <div class="span6">
+    </ul>
+    <h2>Top Five Pages</h2>
+    {% include 'rango/page_list.html' %}
+  </div>
+  <!--/span-->
+</div>
+<!--/row-->
+{% endblock %}

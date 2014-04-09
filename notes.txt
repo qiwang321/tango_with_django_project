@@ -1,0 +1,4 @@
+bing api:
+Primary Account Key 30M/7Lxa2TQvYtxrsCRPiS3SzBZX2pcgh/N0Z97W/yQ
+search urls:
+https://api.datamarket.azure.com/Bing/Search/v1/Web?Query=%27rango%27

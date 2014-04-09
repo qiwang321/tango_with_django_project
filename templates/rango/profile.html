@@ -1,0 +1,15 @@
+{% extends 'rango/base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body_block %}
+  <div class="">
+    <p>User Name: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    {% if user.userprofile %} <!-- the super user does not have a profile -->
+      <p>Website: {{ user.userprofile.website }}</p>
+      <p>Picture:</p>
+      <img src="/media/{{ user.userprofile.picture }}" width="200" alt="You don't have a profile picture" />
+    {% endif %}
+  </div>
+{% endblock %}
